@@ -51,7 +51,7 @@ function initScene(gl, width, height) {
     `;
     const defaultFragmentShader = `
         varying lowp vec4 v_Color;
-  
+
         void main(void) {
             gl_FragColor = v_Color;
         }
@@ -69,10 +69,10 @@ function initScene(gl, width, height) {
         u_Projection: gl.getUniformLocation(defaultSP, "u_Projection"),
         u_ModelView: gl.getUniformLocation(defaultSP, "u_ModelView")
     }
-    
+
     gl.enableVertexAttribArray(defaultSP.locations.a_Position);
     gl.enableVertexAttribArray(defaultSP.locations.a_Color);
-    
+
     //initialize model view and projection matrices
 
     const mvMatrix = mat4.create();
@@ -106,7 +106,7 @@ function drawScene(gl, scene) {
     gl.vertexAttribPointer(scene.defaultSP.locations.a_Position, 
                            scene.buffers.trianglePosition.itemSize,
                            gl.FLOAT, false, 0, 0);
-    
+
     // pass triangle vertex colors
     gl.bindBuffer(gl.ARRAY_BUFFER, scene.buffers.triangleColor);
     gl.vertexAttribPointer(scene.defaultSP.locations.a_Color,
