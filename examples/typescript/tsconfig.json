@@ -11,6 +11,6 @@
     "scripts/**/*"
   ],
   "files": [
-      "hey.ts"
+      "intro.ts"
   ]
 }

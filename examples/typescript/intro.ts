@@ -32,6 +32,9 @@ class Student implements Person {
 const p2: Readonly<Person> = p1;
 
 // you can also make arrays immutable
+const numbers: ReadonlyArray<number> = [...Array(10).keys()];
+//numbers.push(42);
+console.log(numbers);
 
 type MyThing = {a: number} & {b: string};
 type Shape = { kind: "circle", radius: number }
