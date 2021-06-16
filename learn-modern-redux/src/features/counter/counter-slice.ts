@@ -31,7 +31,7 @@ const counterSlice = createSlice({
             state.value = 0;
         },
 
-        amountAdded(state, action: PayloadAction<number>) {
+        added(state, action: PayloadAction<number>) {
             state.value += action.payload;
         }
     }
@@ -39,6 +39,5 @@ const counterSlice = createSlice({
 
 // counterSlice.actions is an object containing all of the action creators
 // their names derive from the reducer names above
-export const { incremented, decremented, reset, amountAdded } = 
-       counterSlice.actions;
+export const { incremented, decremented, reset, added } = counterSlice.actions;
 export default counterSlice.reducer;
