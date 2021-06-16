@@ -1,7 +1,7 @@
 import React from 'react'
-import { useAppDispatch, useAppSelector } from './app/hooks'
-import { incremented, decremented } from './features/counter/counter-slice'
-import { reset, added } from './features/counter/counter-slice'
+import { useAppDispatch, useAppSelector } from '../../app/hooks'
+import { incremented, decremented } from './counter-slice'
+import { reset, added } from './counter-slice'
 
 function Counter() {
   const dispatch = useAppDispatch();

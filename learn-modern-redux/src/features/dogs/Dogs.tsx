@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useFetchBreedsQuery } from './features/dogs/dogs-api-slice';
+import { useFetchBreedsQuery } from './dogs-api-slice';
 
 function Dogs() {
   const [numDogs, setNumDogs] = useState(5);

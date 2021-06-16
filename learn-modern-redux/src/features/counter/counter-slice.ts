@@ -15,7 +15,7 @@ const counterSlice = createSlice({
     reducers: {
         // immer allows state to be modified directly as it will replay
         // those changes to perform the usual immmutable state update
-    
+
         // increment
         incremented(state) {
             state.value++;
