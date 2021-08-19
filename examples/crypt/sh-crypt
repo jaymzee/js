@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]; then
+    echo Usage: sh-crypt string
+    exit 2
+fi
+
+echo base64 "   '$1'" $(printf "$1" | base64)
+echo md5sum "   '$1'" $(printf "$1" | md5sum)
+echo sha1sum "  '$1'" $(printf "$1" | sha1sum)
+echo sha256sum "'$1'" $(printf "$1" | sha256sum)
