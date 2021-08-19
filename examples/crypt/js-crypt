@@ -13,3 +13,4 @@ console.log(`base64 '${data}'`, base64.stringify(utf8.parse(data)));
 console.log(`md5    '${data}'`, hex.stringify(md5(data)));
 console.log(`sha1   '${data}'`, hex.stringify(sha1(data)));
 console.log(`sha256 '${data}'`, hex.stringify(sha256(data)));
+console.log(`b64 md5'${data}'`, base64.stringify(md5(data)));
