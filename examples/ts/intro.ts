@@ -3,14 +3,14 @@ interface Person {
     age: number;
 }
 
-let p1 = {
+const p1 = {
     name: 'joe',
     age: 42,
     when: new Date()
 }
 
 // typescript is structural. p1 is a Person
-let p1_: Person = p1;
+const p1_: Person = p1;
 
 // implements will insure the methods are provided but it isn't strictly
 // necessary for Student to be a Person (typescript is structural)
@@ -40,8 +40,8 @@ type MyThing = {a: number} & {b: string};
 type Shape = { kind: "circle", radius: number }
            | { kind: "square", x: number };
 
-let s1: Shape = { kind: "circle", radius: 5 }
-let s2: Shape = { kind: "square", x: 8 }
+const s1: Shape = { kind: "circle", radius: 5 }
+const s2: Shape = { kind: "square", x: 8 }
 
 function foo(s: Shape) {
     switch (s.kind) {
@@ -63,14 +63,14 @@ function firstish<T extends { length: number }>(t1: T, t2: T): T {
     return t1.length > t2.length ? t1 : t2;
 }
 
-let z = firstish([2,3], [1]);
+const z = firstish([2,3], [1]);
 console.log(z);
 
 interface Speaks {
     speak()
 }
 
-let s3 = {
+const s3 = {
     speak(): void {
         console.log('hi');
     }
@@ -82,7 +82,7 @@ class Potato {
     }
 }
 
-let s4 = new Potato();
+const s4 = new Potato();
 
 function bar(s: Speaks) {
     s.speak();
@@ -90,3 +90,5 @@ function bar(s: Speaks) {
 
 bar(s3);
 bar(s4);
+
+console.log(__dirname);
