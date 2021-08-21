@@ -1,8 +1,10 @@
 import express from 'express';
+import ejsLayouts from 'express-ejs-layouts';
 
 const port = 5000;
 const app = express();
 
+app.use(ejsLayouts);
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
@@ -14,11 +16,11 @@ app.get('/', (req, res) => {
   ];
   const tagline = 'No programming concept is complete without a cute animal mascot.';
 
-  res.render('pages/index', { mascots, tagline });
+  res.render('index', { mascots, tagline });
 });
 
 app.get('/about', (req, res) => {
-  res.render('pages/about');
+  res.render('about');
 });
 
 app.listen(port, () => {
