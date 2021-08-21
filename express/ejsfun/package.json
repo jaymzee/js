@@ -1,8 +1,8 @@
 {
-  "name": "hello2",
+  "name": "ejsfun",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "dist/server.js",
   "type": "module",
   "scripts": {
     "prebuild": "eslint src/**/*.ts",
@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ejs": "^3.1.6",
     "express": "^4.17.1"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@typescript-eslint/parser": "^4.29.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.24.1"
+    "eslint-plugin-import": "^2.24.1",
+    "typescript": "^4.3.5"
   }
 }
